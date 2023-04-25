@@ -8,5 +8,6 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
 {
     internal class RecipeBook
     {
+
     }
 }
