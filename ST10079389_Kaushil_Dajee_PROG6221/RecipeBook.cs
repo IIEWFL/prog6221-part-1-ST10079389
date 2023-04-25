@@ -184,30 +184,34 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                     {
                         quantity[i] = quantity[i] * 0.5;
                     }
+                    QuantityCorrect();
                     Menu_Options();
-                    // code block
                     break;
                 case 2:
                     for (int i = 0; i < quantity.Length; i++)
                     {
                         quantity[i] = quantity[i] * 2;
                     }
+                    QuantityCorrect();
                     Menu_Options();
-                    // code block
                     break;
                 case 3:
                     for (int i = 0; i < quantity.Length; i++)
                     {
                         quantity[i] = quantity[i] * 3;
                     }
+                    QuantityCorrect();
                     Menu_Options();
-                    // code block
                     break;
                 default:
                     Console.WriteLine("Sorry, Invalid Option");
-                    //Console.Beep();
+                    Menu_Options();
                     break;
             }
+        }
+        private void QuantityCorrect()
+        {
+            Console.WriteLine("The quantity of your ingridients has been scalled successfully");
         }
         public void ResetQuantity()
         {
