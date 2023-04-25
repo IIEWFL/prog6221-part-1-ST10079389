@@ -10,6 +10,9 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            RecipeBook book = new RecipeBook();
+            book.Menu_Options();
         }
     }
 }
