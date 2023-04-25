@@ -41,7 +41,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 case 3:
                     if (opt)
                     {
-                        //QuantitySelecttion();
+                        QuantitySelecttion();
                     }
                     else
                     {
@@ -51,7 +51,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 case 4:
                     if (opt)
                     {
-                        //ResetQuantity();
+                        ResetQuantity();
                     }
                     else
                     {
@@ -164,6 +164,64 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
             catch (System.NullReferenceException)
             {
                 Console.WriteLine("Sorry, you did not input any values");
+            }
+            finally
+            {
+                Menu_Options();
+            }
+        }
+        public void QuantitySelecttion()
+        {
+            Console.WriteLine("Select from the following options:" +
+                "\n1. Scaling the quantity of your ingridients by 0.5" +
+                "\n2. Scaling the quantity of your ingridients by 2" +
+                "\n3. Scaling the quantity of the ingridents by 3");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    for (int i = 0; i < quantity.Length; i++)
+                    {
+                        quantity[i] = quantity[i] * 0.5;
+                    }
+                    Menu_Options();
+                    // code block
+                    break;
+                case 2:
+                    for (int i = 0; i < quantity.Length; i++)
+                    {
+                        quantity[i] = quantity[i] * 2;
+                    }
+                    Menu_Options();
+                    // code block
+                    break;
+                case 3:
+                    for (int i = 0; i < quantity.Length; i++)
+                    {
+                        quantity[i] = quantity[i] * 3;
+                    }
+                    Menu_Options();
+                    // code block
+                    break;
+                default:
+                    Console.WriteLine("Sorry, Invalid Option");
+                    //Console.Beep();
+                    break;
+            }
+        }
+        public void ResetQuantity()
+        {
+            try
+            {
+                for (int i = 0; i < originalQuantity.Length; i++)
+                {
+                    quantity[i] = originalQuantity[i];
+                }
+                Console.WriteLine("Success, the quantity of your indgridients has been reset to the original quantity");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Sorrry, could not rest the quantity");
             }
             finally
             {
