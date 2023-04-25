@@ -174,10 +174,12 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         }
         public void QuantitySelecttion()
         {
+            Console.WriteLine();
             Console.WriteLine("Select from the following options:" +
                 "\n1. Scaling the quantity of your ingridients by 0.5" +
                 "\n2. Scaling the quantity of your ingridients by 2" +
-                "\n3. Scaling the quantity of the ingridents by 3");
+                "\n3. Scaling the quantity of the ingridents by 3" +
+                "\n4.Cancel");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -203,6 +205,10 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                         quantity[i] = quantity[i] * 3;
                     }
                     QuantityCorrect();
+                    Menu_Options();
+                    break;
+                case 4:
+                    Console.WriteLine();
                     Menu_Options();
                     break;
                 default:
