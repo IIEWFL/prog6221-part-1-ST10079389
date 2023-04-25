@@ -122,7 +122,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 opt = true;
                 RecipeInformation blonde = new RecipeInformation(recipeName, recipeIngridients, measurementIngrident, steps, quantity, originalQuantity);
                 blonde.saveRecipes(recipeName, recipeIngridients, measurementIngrident, steps, quantity, originalQuantity);
-                Console.WriteLine("Recipe has been saved successfully");
+                Console.WriteLine("Your recipe has been saved successfully!!");
             }
             catch (FormatException)
             {
@@ -138,6 +138,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
             }
             finally
             {
+                Console.WriteLine();
                 Menu_Options();
             }
         }
@@ -167,6 +168,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
             }
             finally
             {
+                Console.WriteLine();
                 Menu_Options();
             }
         }
@@ -212,6 +214,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         private void QuantityCorrect()
         {
             Console.WriteLine("The quantity of your ingridients has been scalled successfully");
+            Console.WriteLine();
         }
         public void ResetQuantity()
         {
@@ -229,6 +232,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
             }
             finally
             {
+                Console.WriteLine();
                 Menu_Options();
             }
         }
@@ -244,6 +248,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 Array.Clear(originalQuantity, 0, originalQuantity.Length);
                 opt = false;
                 Console.WriteLine("All the data has been reset");
+                Console.WriteLine();
             }
             catch (Exception e)
             {
