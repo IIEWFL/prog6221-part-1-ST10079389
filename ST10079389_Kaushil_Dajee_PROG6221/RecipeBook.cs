@@ -61,7 +61,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 case 5:
                     if (opt)
                     {
-                        //ClearAll();
+                        ClearAll();
                     }
                     else
                     {
@@ -222,6 +222,28 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
             catch (Exception e)
             {
                 Console.WriteLine("Sorrry, could not rest the quantity");
+            }
+            finally
+            {
+                Menu_Options();
+            }
+        }
+        public void ClearAll()
+        {
+            try
+            {
+                Array.Clear(recipeName, 0, recipeName.Length);
+                Array.Clear(recipeIngridients, 0, recipeIngridients.Length);
+                Array.Clear(measurementIngrident, 0, measurementIngrident.Length);
+                Array.Clear(steps, 0, steps.Length);
+                Array.Clear(quantity, 0, quantity.Length);
+                Array.Clear(originalQuantity, 0, originalQuantity.Length);
+                opt = false;
+                Console.WriteLine("All the data has been reset");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Sorry, the data could not be deleted");
             }
             finally
             {
