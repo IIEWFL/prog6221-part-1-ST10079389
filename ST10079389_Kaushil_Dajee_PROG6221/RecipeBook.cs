@@ -24,17 +24,20 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 "\n4. Resetting the quantity" +
                 "\n5. Clear all data" +
                 "\n6. Exit");
-            int option = Convert.ToInt32(Console.ReadLine());
+            int option;
+            while (!int.TryParse(Console.ReadLine(), out option))
+            {
+                Console.WriteLine("Invalid input. Please enter a number.");
+            }
             switch (option)
             {
                 case 1:
-                    InputRecipe();
+                        InputRecipe();
                     break;
                 case 2:
                     if (opt)
                     {
-                    PrintRecipe();
-
+                        PrintRecipe();
                     }
                     else
                     {
@@ -89,6 +92,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         {
             try
             {
+                Console.WriteLine();
                 Console.WriteLine("Enter the Recipes Name");
                 recipeName[0] = Console.ReadLine();
                 Console.WriteLine("Enter the number of ingridients for " + recipeName[0]);
