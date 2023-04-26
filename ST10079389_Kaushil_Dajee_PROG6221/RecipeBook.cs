@@ -148,6 +148,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         }
         public void PrintRecipe()
         {
+            Console.WriteLine();
             try
             {
                 Console.WriteLine("Recipe Name: " + recipeName[0]);
@@ -249,26 +250,33 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         }
         public void ClearAll()
         {
-            try
+            Console.WriteLine("Are you sure you want to clear all data? This action cannot be undone. To confirm, please enter 'DELETE'.");
+            string confirmation = Console.ReadLine();
+            if (confirmation == "DELETE")
             {
-                Array.Clear(recipeName, 0, recipeName.Length);
-                Array.Clear(recipeIngridients, 0, recipeIngridients.Length);
-                Array.Clear(measurementIngrident, 0, measurementIngrident.Length);
-                Array.Clear(steps, 0, steps.Length);
-                Array.Clear(quantity, 0, quantity.Length);
-                Array.Clear(originalQuantity, 0, originalQuantity.Length);
-                opt = false;
-                Console.WriteLine("All the data has been reset");
-                Console.WriteLine();
+                try
+                {
+                    Array.Clear(recipeName, 0, recipeName.Length);
+                    Array.Clear(recipeIngridients, 0, recipeIngridients.Length);
+                    Array.Clear(measurementIngrident, 0, measurementIngrident.Length);
+                    Array.Clear(steps, 0, steps.Length);
+                    Array.Clear(quantity, 0, quantity.Length);
+                    Array.Clear(originalQuantity, 0, originalQuantity.Length);
+                    opt = false;
+                    Console.WriteLine("All data has been deleted.");
+                    Console.WriteLine();
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    Console.WriteLine("Sorry, data could not be deleted due to an index out of range error.");
+                }
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine("Sorry, the data could not be deleted");
+                Console.WriteLine("Data deletion cancelled.");
             }
-            finally
-            {
-                Menu_Options();
-            }
+            Menu_Options();
         }
+
     }
 }
