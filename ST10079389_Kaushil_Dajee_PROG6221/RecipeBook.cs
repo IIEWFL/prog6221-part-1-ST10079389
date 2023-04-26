@@ -12,6 +12,9 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         private string[] recipeName = new string[1];
         private string[] recipeIngridients, measurementIngrident, steps;
         private double[] quantity, originalQuantity;
+        private const double ScalingFactorHalf = 0.5;
+        private const double ScalingFactorDouble = 2.0;
+        private const double ScalingFactorTriple = 3.0;
         public void Menu_Options()
         {
             Console.WriteLine("Please select from the following options:" +
@@ -25,12 +28,12 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
             switch (option)
             {
                 case 1:
-                    Input();
+                    InputRecipe();
                     break;
                 case 2:
                     if (opt)
                     {
-                        Output();
+                    PrintRecipe();
 
                     }
                     else
@@ -41,7 +44,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 case 3:
                     if (opt)
                     {
-                        QuantitySelecttion();
+                        QuantitySelection();
                     }
                     else
                     {
@@ -82,7 +85,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
             Console.WriteLine("You need to input values");
             Menu_Options();
         }
-        public void Input()
+        public void InputRecipe()
         {
             try
             {
@@ -143,7 +146,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 Menu_Options();
             }
         }
-        public void Output()
+        public void PrintRecipe()
         {
             try
             {
@@ -173,56 +176,57 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 Menu_Options();
             }
         }
-        public void QuantitySelecttion()
+        public void QuantitySelection()
         {
             Console.WriteLine();
             Console.WriteLine("Select from the following options:" +
-                "\n1. Scaling the quantity of your ingridients by 0.5" +
-                "\n2. Scaling the quantity of your ingridients by 2" +
-                "\n3. Scaling the quantity of the ingridents by 3" +
-                "\n4.Cancel");
-            int option = Convert.ToInt32(Console.ReadLine());
+                "\n1. Scaling the quantity of your ingredients by 0.5" +
+                "\n2. Scaling the quantity of your ingredients by 2" +
+                "\n3. Scaling the quantity of the ingredients by 3" +
+                "\n4. Cancel");
+            int option;
+            if (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 4)
+            {
+                Console.WriteLine("Sorry, invalid option");
+                Menu_Options();
+                return;
+            }
+
             switch (option)
             {
                 case 1:
-                    for (int i = 0; i < quantity.Length; i++)
-                    {
-                        quantity[i] = quantity[i] * 0.5;
-                    }
-                    QuantityCorrect();
-                    Menu_Options();
+                    ScaleQuantities(ScalingFactorHalf);
                     break;
                 case 2:
-                    for (int i = 0; i < quantity.Length; i++)
-                    {
-                        quantity[i] = quantity[i] * 2;
-                    }
-                    QuantityCorrect();
-                    Menu_Options();
+                    ScaleQuantities(ScalingFactorDouble);
                     break;
                 case 3:
-                    for (int i = 0; i < quantity.Length; i++)
-                    {
-                        quantity[i] = quantity[i] * 3;
-                    }
-                    QuantityCorrect();
-                    Menu_Options();
+                    ScaleQuantities(ScalingFactorTriple);
                     break;
                 case 4:
                     Console.WriteLine();
                     Menu_Options();
-                    break;
-                default:
-                    Console.WriteLine("Sorry, Invalid Option");
-                    Menu_Options();
-                    break;
+                    return;
+            }
+
+            QuantityCorrect();
+            Menu_Options();
+        }
+
+        private void ScaleQuantities(double scalingFactor)
+        {
+            for (int i = 0; i < quantity.Length; i++)
+            {
+                quantity[i] *= scalingFactor;
             }
         }
+
         private void QuantityCorrect()
         {
-            Console.WriteLine("The quantity of your ingridients has been scalled successfully");
+            Console.WriteLine("The quantity of your ingredients has been scaled successfully");
             Console.WriteLine();
         }
+
         public void ResetQuantity()
         {
             try

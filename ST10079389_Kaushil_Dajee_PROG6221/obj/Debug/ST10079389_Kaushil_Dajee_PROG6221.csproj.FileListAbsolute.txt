@@ -6,3 +6,11 @@ C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Visual Studio 2022\ST10079389_K
 C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Visual Studio 2022\ST10079389_Kaushil_Dajee_PROG6221\obj\Debug\ST10079389_Kaushil_Dajee_PROG6221.csproj.CoreCompileInputs.cache
 C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Visual Studio 2022\ST10079389_Kaushil_Dajee_PROG6221\obj\Debug\ST10079389_Kaushil_Dajee_PROG6221.exe
 C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Visual Studio 2022\ST10079389_Kaushil_Dajee_PROG6221\obj\Debug\ST10079389_Kaushil_Dajee_PROG6221.pdb
+C:\Users\Ditesh\Source\Repos\prog6221-part-1-ST10079389\ST10079389_Kaushil_Dajee_PROG6221\bin\Debug\ST10079389_Kaushil_Dajee_PROG6221.exe.config
+C:\Users\Ditesh\Source\Repos\prog6221-part-1-ST10079389\ST10079389_Kaushil_Dajee_PROG6221\bin\Debug\ST10079389_Kaushil_Dajee_PROG6221.exe
+C:\Users\Ditesh\Source\Repos\prog6221-part-1-ST10079389\ST10079389_Kaushil_Dajee_PROG6221\bin\Debug\ST10079389_Kaushil_Dajee_PROG6221.pdb
+C:\Users\Ditesh\Source\Repos\prog6221-part-1-ST10079389\ST10079389_Kaushil_Dajee_PROG6221\obj\Debug\ST10079389_Kaushil_Dajee_PROG6221.csproj.AssemblyReference.cache
+C:\Users\Ditesh\Source\Repos\prog6221-part-1-ST10079389\ST10079389_Kaushil_Dajee_PROG6221\obj\Debug\ST10079389_Kaushil_Dajee_PROG6221.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ditesh\Source\Repos\prog6221-part-1-ST10079389\ST10079389_Kaushil_Dajee_PROG6221\obj\Debug\ST10079389_Kaushil_Dajee_PROG6221.csproj.CoreCompileInputs.cache
+C:\Users\Ditesh\Source\Repos\prog6221-part-1-ST10079389\ST10079389_Kaushil_Dajee_PROG6221\obj\Debug\ST10079389_Kaushil_Dajee_PROG6221.exe
+C:\Users\Ditesh\Source\Repos\prog6221-part-1-ST10079389\ST10079389_Kaushil_Dajee_PROG6221\obj\Debug\ST10079389_Kaushil_Dajee_PROG6221.pdb
