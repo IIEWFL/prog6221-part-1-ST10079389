@@ -22,8 +22,9 @@ Michael Freidgeim:
 https://stackoverflow.com/users/52277/michael-freidgeim
 
 I created my console app under the name ST10079389_Kaushil_Dajee_PROG6221 with 3 classes. A recipe book class, recipe information class and the main class Program. The 
-recipe information class has a constructor which has arrays as parameters and i created a recipe information list with a method which saaves all these recipes to a list 
-which will be used in part 2. I have a recipe book class which has majority of the work and does almost everything for inputting the recipe, to printing the recipe, to scalling and resetting the quantities and deletig all the data it is done in this class.
+recipe information class has a constructor which has arrays as parameters and i created a recipe information list with a method which saaves all these recipes to a list which will be used in part 2. 
+
+I have a recipe book class which has majority of the work and does almost everything for inputting the recipe, to printing the recipe, to scalling and resetting the quantities and deletig all the data it is done in this class.
 Menu_Options(): displays a menu with several options, reads the user's input, and calls the appropriate method based on the selected option and if the user has to incorrectly enter something the system will pick it up and keep prompting the user to select properly from the correct options.
 InputFail(): prompts the user to input values.
 InputRecipe(): allows the user to input the details of a recipe, including the recipe name, the number of ingredients, the names and quantities of the ingredients, the units of measurement for the ingredients, the number of steps required to make the recipe, and the steps required to make the recipe. It then saves the recipe to a list.
