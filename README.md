@@ -1,23 +1,23 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Oa99dRjC)
 Code Attribution:
 
-https://stackoverflow.com/questions/2673512/how-to-clear-an-array
+https://stackoverflow.com/questions/2673512/how-to-clear-an-array from Stack Overflow
 Jørn Schou-Rode:
 https://stackoverflow.com/users/121364/j%c3%b8rn-schou-rode
 
-https://stackoverflow.com/questions/39777795/c-sharp-new-array-class-with-constructor
+https://stackoverflow.com/questions/39777795/c-sharp-new-array-class-with-constructor from Stack Overflow
 Brendan L:
 https://stackoverflow.com/users/4672638/brendan-l
 
-https://stackoverflow.com/questions/7580277/why-use-the-params-keyword
+https://stackoverflow.com/questions/7580277/why-use-the-params-keyword from Stack Overflow
 MasterMastic:
 https://stackoverflow.com/users/825637/mastermastic
 
-https://stackoverflow.com/questions/14973642/how-using-try-catch-for-exception-handling-is-best-practice
+https://stackoverflow.com/questions/14973642/how-using-try-catch-for-exception-handling-is-best-practice from Stack Overflow
 TylerH:
 https://stackoverflow.com/users/2756409/tylerh
 
-https://stackoverflow.com/questions/4272579/how-to-print-full-stack-trace-in-exception
+https://stackoverflow.com/questions/4272579/how-to-print-full-stack-trace-in-exception from Stack Overflow
 Michael Freidgeim:
 https://stackoverflow.com/users/52277/michael-freidgeim
 
