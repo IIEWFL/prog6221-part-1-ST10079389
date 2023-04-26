@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace ST10079389_Kaushil_Dajee_PROG6221
 {
     internal class RecipeBook
@@ -44,7 +39,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                     }
                     else
                     {
-                        Selection();
+                        InputFail();
                     }
                     break;
                 case 3:
@@ -54,7 +49,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                     }
                     else
                     {
-                        Selection();
+                        InputFail();
                     }
                     break;
                 case 4:
@@ -64,7 +59,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                     }
                     else
                     {
-                        Selection();
+                        InputFail();
                     }
                     break;
                 case 5:
@@ -74,7 +69,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                     }
                     else
                     {
-                        Selection();
+                        InputFail();
                     }
                     break;
                 case 6:
@@ -87,7 +82,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                     break;
             }
         }
-        public void Selection()
+        public void InputFail()
         {
             //this method is used if the user did not enter any values
             Console.WriteLine("You need to input values");
