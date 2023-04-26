@@ -17,6 +17,8 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         private const double ScalingFactorTriple = 3.0;
         public void Menu_Options()
         {
+            //This method displays the main menu options for the Recipe Book program, and allows the user to select an option.
+            //The method reads the user's input and uses a switch statement to call the appropriate method based on the selected option.
             Console.WriteLine("Please select from the following options:" +
                 "\n1. Entering the Recipe" +
                 "\n2. Viewing the Recipe" +
@@ -25,6 +27,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 "\n5. Clear all data" +
                 "\n6. Exit");
             int option;
+            //If the user enters an invalid input, the method will prompt them to enter a number until a valid input is received.
             while (!int.TryParse(Console.ReadLine(), out option))
             {
                 Console.WriteLine("Invalid input. Please enter a number.");
@@ -75,6 +78,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                     }
                     break;
                 case 6:
+                    // The program terminates when the user selects the "Exit" option from the menu.
                     Environment.Exit(6);
                     break;
                 default:
@@ -85,11 +89,13 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         }
         public void Selection()
         {
+            //this method is used if the user did not enter any values
             Console.WriteLine("You need to input values");
             Menu_Options();
         }
         public void InputRecipe()
         {
+            // This method allows the user to input the details of a recipe
             try
             {
                 Console.WriteLine();
@@ -97,6 +103,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 recipeName[0] = Console.ReadLine();
                 Console.WriteLine("Enter the number of ingridients for " + recipeName[0]);
                 int numberOfIngridients = Convert.ToInt32(Console.ReadLine());
+                //the size of the array is declared 
                 recipeIngridients = new string[numberOfIngridients];
                 quantity = new double[numberOfIngridients];
                 originalQuantity = new double[numberOfIngridients];
@@ -129,9 +136,11 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                 }
                 opt = true;
                 RecipeInformation blonde = new RecipeInformation(recipeName, recipeIngridients, measurementIngrident, steps, quantity, originalQuantity);
+                //it is then saved to a list to save the recipes details for part 2
                 blonde.saveRecipes(recipeName, recipeIngridients, measurementIngrident, steps, quantity, originalQuantity);
                 Console.WriteLine("Your recipe has been saved successfully!!");
             }
+            //catches an exception that the user might experience
             catch (FormatException)
             {
                 Console.WriteLine("Invalid input. Please try again.");
@@ -152,6 +161,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         }
         public void PrintRecipe()
         {
+            //prints out the recipe that the user entered
             Console.WriteLine();
             try
             {
@@ -183,6 +193,8 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         }
         public void QuantitySelection()
         {
+            // This method displays a menu to scale the quantity of ingredients by 0.5, 2, or 3 times.
+            // It also calls the ScaleQuantities() method based on the user's choice to scale the quantity.
             Console.WriteLine();
             Console.WriteLine("Select from the following options:" +
                 "\n1. Scaling the quantity of your ingredients by 0.5" +
@@ -209,17 +221,19 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                     ScaleQuantities(ScalingFactorTriple);
                     break;
                 case 4:
+                    Console.WriteLine("You have cancelled scaling the quantities.");
                     Console.WriteLine();
                     Menu_Options();
                     return;
             }
-
+            //displays a message to say it has been scalled successfully
             QuantityCorrect();
             Menu_Options();
         }
 
         private void ScaleQuantities(double scalingFactor)
         {
+            //method scales the quantity based on what the user selects
             for (int i = 0; i < quantity.Length; i++)
             {
                 quantity[i] *= scalingFactor;
@@ -234,13 +248,14 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
 
         public void ResetQuantity()
         {
+            //method resets all quantities back to their original quantities
             try
             {
                 for (int i = 0; i < originalQuantity.Length; i++)
                 {
                     quantity[i] = originalQuantity[i];
                 }
-                Console.WriteLine("Success, the quantity of your indgridients has been reset to the original quantity");
+                Console.WriteLine("Success, the quantity of your indgridients has been reset to the original quantity!");
             }
             catch (Exception e)
             {
@@ -254,6 +269,8 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
         }
         public void ClearAll()
         {
+            //This method clears all the recipe data in the arrays and sets the opt variable to false.
+            //It prompts the user to confirm the deletion by typing 'DELETE' before proceeding.
             Console.WriteLine("Are you sure you want to clear all data? This action cannot be undone. To confirm, please enter 'DELETE'.");
             string confirmation = Console.ReadLine();
             if (confirmation == "DELETE")

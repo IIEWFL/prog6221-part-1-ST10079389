@@ -8,6 +8,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
 {
     internal class RecipeInformation
     {
+        // Class for holding recipe information in a constructor for specific recipes
         public RecipeInformation(string[] recipeName, string[] recipeIngridients, string[] measurementIngrident, string[] steps, double[] quantity, double[] originalquantity)
         {
             this.recipeName = recipeName;
@@ -17,6 +18,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
             this.quantity = quantity;
             this.originalquantity = originalquantity;
         }
+        // List to hold saved recipes and method to add a new recipe to the list
         List<RecipeInformation> recipes = new List<RecipeInformation>();
         public string[] recipeName { get; set; }
         public string[] recipeIngridients { get; set; }
