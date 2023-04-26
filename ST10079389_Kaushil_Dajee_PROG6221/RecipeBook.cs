@@ -73,6 +73,7 @@ namespace ST10079389_Kaushil_Dajee_PROG6221
                     break;
                 default:
                     Console.WriteLine("Sorry, invalid option!");
+                    Menu_Options();
                     break;
             }
         }
